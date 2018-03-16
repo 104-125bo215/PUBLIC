@@ -1,0 +1,16 @@
+<head>
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src = "traitement.js"></script>
+</head>
+
+<body>
+    <div id="myDiv"></div>
+    <script>
+        var layout = {};
+        setInterval(function () {
+            data = fake_getDataFromWS();
+            Plotly.newPlot('myDiv', data, layout);
+        }, 100);
+    </script>
+</body>
